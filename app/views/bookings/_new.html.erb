@@ -1,0 +1,14 @@
+<h1>Request rental of this boat</h1>
+
+<%= simple_form_for [booking, boat] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Send request" %>
+  </div>
+<% end %>

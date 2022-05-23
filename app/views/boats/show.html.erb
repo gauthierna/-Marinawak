@@ -1,2 +1,17 @@
 <h1>Boats#show</h1>
-<p>Find me in app/views/boats/show.html.erb</p>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-6 mx-auto">
+      <h1><%= @boat.name %></h1>
+      <div>
+        <p><%= @boat.category %></p>
+        <p><%= @boat.capacity %></p>
+        <p><%= @boat.description %></p>
+        <p><%= @boat.price_per_day %></p>
+      </div>
+
+      <%= link_to 'Modify this boat', edit_boat_path(@boat) %>
+      <%= link_to 'Back to boats', boats_path %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<h1>Pending bookings:</h1>
+
+<% @bookings.each do |b| %>
+  <h4>Bateau : <%= b.boat.name %></h4>
+  <p>Propriétaire : <%=b.boat.user.first_name %></p>
+  <p>Du <%= b.start_date %> au <%= b.end_date %></p>
+<% end %>

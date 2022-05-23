@@ -6,7 +6,9 @@ class BoatsController < ApplicationController
     @boats = Boat.all
   end
 
-  def show() end
+  def show
+    @booking = Booking.new
+  end
 
   def new
     @boat = Boat.new

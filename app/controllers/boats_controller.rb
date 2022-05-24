@@ -9,6 +9,7 @@ class BoatsController < ApplicationController
   def show
     authorize @boat
     @booking = Booking.new
+    authorize @booking
   end
 
   def new

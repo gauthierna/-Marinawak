@@ -18,4 +18,12 @@ class BookingPolicy < ApplicationPolicy
     true
   end
 
+  def accepted?
+    record.boat.user == user
+  end
+
+  def denied?
+    record.boat.user == user
+  end
+
 end

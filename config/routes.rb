@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: :index do
     member do
-      patch "/accepted", to: "bookings#accepted"
-      patch "/denied", to: "bookings#denied"
+      patch :accepted
+      patch :denied
     end
   end
 end

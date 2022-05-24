@@ -5,7 +5,8 @@
 
   <% @boats.each do |b| %>
     <div class="card-trip col-6">
-      <%= image_tag("card1.jpg") %>
+
+      <%=cl_image_tag(b.photos.first.key) if b.photos.any?%>
       <div class="card-trip-infos">
         <div>
           <h2><%= b.name %></h2>

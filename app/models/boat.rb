@@ -4,4 +4,5 @@ class Boat < ApplicationRecord
   validates :name, uniqueness: true
   validates_associated :user
   validates :capacity, :price_per_day, numericality: { only_integer: true }
+  has_many_attached :photos
 end

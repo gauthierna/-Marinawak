@@ -1,17 +1,19 @@
 <div class="container">
   <div class="d-flex align-items-center justify-content-between mb-3">
     <h3 class="mb-0">Discover all our available Boats</h3>
-    <%= link_to "Create a boat", new_boat_path, class: "btn btn-primary" %>
   </div>
-  <div class="row">
-    <% @boats.each do |boat| %>
-      <div class="co-12 col-sm-6 col-md-4 mb-3">
-        <%= link_to boat_path(boat), class:"text-decoration-none" do %>
-          <div class="card-category">
-            <%= boat.name %>
-          </div>
-        <% end %>
+
+  <% @boats.each do |b| %>
+    <div class="card-trip col-6">
+      <%= image_tag("card1.jpg") %>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= b.name %></h2>
+          <p><%= b.description %> </p>
+        </div>
+        <h2 class="card-trip-pricing"> <%= b.price_per_day %> </h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
       </div>
-    <% end %>
-  </div>
+  <% end %>
 </div>

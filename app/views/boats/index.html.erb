@@ -3,9 +3,13 @@
     <h3 class="mb-0">Discover all our available Boats</h3>
   </div>
 
+<div class="container">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h3 class="mb-0">Discover all our available Boats</h3>
+  </div>
   <% @boats.each do |b| %>
+  <%= link_to boat_path(b) do %>
     <div class="card-trip col-6">
-
       <%=cl_image_tag(b.photos.first.key) if b.photos.any?%>
       <div class="card-trip-infos">
         <div>
@@ -14,7 +18,8 @@
         </div>
         <h2 class="card-trip-pricing"> <%= b.price_per_day %> </h2>
         <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-        </div>
       </div>
+    </div>
+  <% end %>
   <% end %>
 </div>

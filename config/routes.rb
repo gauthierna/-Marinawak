@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :boats do
     resources :bookings, only: %i[new create destroy]
   end
-
+  patch "/bookings", to: "bookings#accepted"
+  patch "/bookings", to: "bookings#denied"
 end

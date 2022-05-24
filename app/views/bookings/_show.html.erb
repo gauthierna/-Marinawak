@@ -1,7 +1,15 @@
 <h1>Pending bookings:</h1>
-
 <% @bookings.each do |b| %>
-  <h4>Bateau : <%= b.boat.name %></h4>
-  <p>Propriétaire : <%=b.boat.user.first_name %></p>
-  <p>Du <%= b.start_date %> au <%= b.end_date %></p>
+  <div class="card-booking">
+    <%= cl_image_tag(b.boat.photos.first.key) if b.boat.photos.any? %>
+    <div class="card-booking-infos">
+      <h2>Boat : <%= b.boat.name %></h2>
+      <p>Owner : <%=b.boat.user.first_name %></p>
+      <p>From <%= b.start_date %> to <%= b.end_date %></p>
+        <div class="button">
+        <%= link_to "Accept", bookings_path, class: "btn btn-primary" %>
+        <%= link_to "Deny", bookings_path, class: "btn btn-danger" %>
+        </div>
+    </div>
+  </div>
 <% end %>

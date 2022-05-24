@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :booking_params, only: %i[create update]
+  before_action :booking_params, only: %i[create update accepted]
 
   def create
     @booking = Booking.new(booking_params)
@@ -15,6 +15,16 @@ class BookingsController < ApplicationController
   end
 
   def update
+  end
+
+  def accepted
+    @booking.status = "accepted"
+    redirect_to dashboard_path
+  end
+
+  def denied
+    @booking.status = "denied"
+    redirect_to dashboard_path
   end
 
   private

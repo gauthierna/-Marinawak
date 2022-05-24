@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.boat_id = params[:boat_id]
     @booking.status = "pending"
+    authorize @booking
     if @booking.save
       redirect_to dashboard_path
     else

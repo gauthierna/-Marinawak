@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   resources :boats do
     resources :bookings, only: %i[new create destroy]
   end
-  patch "/bookings", to: "bookings#accepted"
-  patch "/bookings", to: "bookings#denied"
+  resources :bookings, only: :index do
+    member do
+      patch "/accepted", to: "bookings#accepted"
+      patch "/denied", to: "bookings#denied"
+    end
+  end
 end

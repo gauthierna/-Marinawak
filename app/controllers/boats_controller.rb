@@ -2,6 +2,7 @@ class BoatsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   before_action :set_boat, only: %i[ show edit update destroy ]
 
+
   def index
     @boats = Boat.all
   end
@@ -49,7 +50,7 @@ class BoatsController < ApplicationController
   end
 
   def boat_params
-    params.require(:boat).permit(:name, :category, :capacity, :description, :price_per_day)
+    params.require(:boat).permit(:name, :category, :capacity, :description, :price_per_day, photos: [])
   end
 
 end

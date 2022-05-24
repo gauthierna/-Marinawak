@@ -20,6 +20,7 @@ gem "devise"
 gem "pundit"
 
 gem "dotenv-rails", groups: [:development, :test]
+gem "cloudinary"
 
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "jsbundling-rails"

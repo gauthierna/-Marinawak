@@ -7,17 +7,21 @@ class BoatsController < ApplicationController
   end
 
   def show
+    authorize @boat
     @booking = Booking.new
+    authorize @booking
   end
 
   def new
     @boat = Boat.new
     @user = current_user
+    authorize @boat
   end
 
   def create
     @boat = Boat.new(boat_params)
-    @boat.user_id = current_user.id
+    @boat.user = current_user
+    authorize @boat
     if @boat.save
       redirect_to boat_path(@boat)
     else
@@ -41,6 +45,7 @@ class BoatsController < ApplicationController
 
   def set_boat
     @boat = Boat.find(params[:id])
+    authorize @boat
   end
 
   def boat_params

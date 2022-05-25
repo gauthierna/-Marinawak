@@ -15,3 +15,6 @@ class Booking < ApplicationRecord
 
 
 end
+
+# booking.user ==> celui qui book
+# booking.boat.user ==> le propriétaire du bateau

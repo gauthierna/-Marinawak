@@ -5,18 +5,26 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  border-radius: 5px;
+  border-left: 5px;
+  grid-gap: 16px;
+  margin-bottom: 20px;
 }
 
 .card-booking img {
   height: 100%;
   width: 120px;
   object-fit: cover;
+
 }
 
 .card-booking h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  // padding-left: 16px;
+  // border-top: 16px;
+
 }
 
 .card-booking p {
@@ -24,15 +32,33 @@
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 8px;
+  margin-top: 1px;
+  // padding-left: 16px;
+}
+
+.card-booking a {
+  padding-left: 16px;
+  border-bottom: 16px;
 }
 
 .card_booking .card-booking-infos {
+  // padding: 16px;
+  // display: flex;
+  // justify-content: space-between;
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
 }
 
-.card_booking .card-booking-infos .button{
-  align-items: flex-end;
+.card_booking .card-booking-infos .button {
+//   align-items: flex-end;
+  padding-left: 16px;
+
+}
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #272343;
+  transition: background 0.3s ease;
+  border-bottom: 16px;
+
 }

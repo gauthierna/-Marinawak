@@ -4,14 +4,16 @@
   </div>
   <% @boats.each do |b| %>
   <%= link_to boat_path(b) do %>
-    <div class="card-trip col-6">
+    <div class="card-trip col-3">
       <%=cl_image_tag(b.photos.first.key) if b.photos.any?%>
       <div class="card-trip-infos">
         <div>
+          <p class="button"><%= b.category %></p>
           <h2><%= b.name %></h2>
-          <p><%= b.description %> </p>
+          <p><%= b.description %></p>
+          <p><%= b.price_per_day %>€ per day</p>
+
         </div>
-        <h2 class="card-trip-pricing"> <%= b.price_per_day %> </h2>
         <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
       </div>
     </div>

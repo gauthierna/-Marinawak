@@ -153,3 +153,183 @@ boat_6.photos.attach([
   },
 ])
 boat_6.save!
+
+boat_7 = Boat.new(name: "Titanic", category:"Luxury", capacity: 1000, price_per_day:1250000, user: user_2)
+boat_7.photos.attach([
+  {
+    io: File.open('public/images/t1.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/t2.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/t3.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+])
+boat_7.save!
+
+boat_8 = Boat.new(name: "Galeon 325", category:"Speed", capacity: 5, price_per_day:20000, user: user_1)
+boat_8.photos.attach([
+  {
+    io: File.open('public/images/g1.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/g2.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/g3.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+])
+boat_8.save!
+
+boat_9 = Boat.new(name: "Explorer Pro", category:"Family", capacity: 1, price_per_day:10, user: user_2)
+boat_9.photos.attach([
+  {
+    io: File.open('public/images/ex1.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/ex2.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/ex3.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+])
+boat_9.save!
+
+boat_10 = Boat.new(name: "Catana", category:"Catamaran", capacity: 5, price_per_day:2400, user: user_2)
+boat_10.photos.attach([
+  {
+    io: File.open('public/images/ca1.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/ca2.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/ca3.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+])
+boat_10.save!
+
+boat_11 = Boat.new(name: "Charles de Gaulle", category:"Military", capacity: 135, price_per_day:12500, user: user_1)
+boat_11.photos.attach([
+  {
+    io: File.open('public/images/cdg1.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/cdg2.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/cdg3.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+])
+boat_11.save!
+
+boat_12 = Boat.new(name: "Le Marité", category:"Voilier", capacity: 6, price_per_day:1500, user: user_3)
+boat_12.photos.attach([
+  {
+    io: File.open('public/images/ma1.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/ma2.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/ma3.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+])
+boat_12.save!
+
+boat_13 = Boat.new(name: "Le Redoutable", category:"Submarine", capacity: 6, price_per_day:321500, user: user_3)
+boat_13.photos.attach([
+  {
+    io: File.open('public/images/lr1.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/lr2.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/lr3.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+])
+boat_13.save!
+
+boat_14 = Boat.new(name: "RMS Queen Elizabeth", category:"Paquebot", capacity: 14000, price_per_day:1500000, user: user_3)
+boat_14.photos.attach([
+  {
+    io: File.open('public/images/qe1.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/qe2.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/qe3.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+])
+boat_14.save!
+
+boat_15 = Boat.new(name: "Vida 3", category:"Speedboat", capacity: 3, price_per_day:150000, user: user_1)
+boat_15.photos.attach([
+  {
+    io: File.open('public/images/v1.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/vi2.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+  {
+    io: File.open('public/images/vi3.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  },
+])
+boat_15.save!

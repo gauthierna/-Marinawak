@@ -3,7 +3,7 @@
   <div class="card-booking">
     <%= cl_image_tag(b.boat.photos.first.key) if b.boat.photos.any? %>
     <div class="card-booking-infos">
-      <h2>Boat : <%= b.boat.name %></h2>
+      <h2>Boat : <%= b.boat.name %> Price - <%=b.amount%> ₿</h2>
       <p>Status : <%=b.status %></p>
       <p>Owner : <%=b.boat.user.first_name %></p>
       <p>From <%= b.start_date %> to <%= b.end_date %></p>
@@ -17,7 +17,7 @@
   <div class="card-booking">
     <%= cl_image_tag(b.boat.photos.first.key) if b.boat.photos.any? %>
     <div class="card-booking-infos">
-      <h2>Boat : <%= b.boat.name %></h2>
+      <h2>Boat : <%= b.boat.name %> Price - <%=b.amount%> ₿</h2>
       <p>Status : <%=b.status %></p>
       <p>User : <%=b.user.first_name %> <%=b.user.last_name %></p>
       <p>From <%= b.start_date %> to <%= b.end_date %></p>

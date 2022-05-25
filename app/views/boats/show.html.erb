@@ -1,21 +1,25 @@
-<h1><%= @boat.name %></h1>
-<div class="container my-5">
-  <div class="row">
-    <div class="col-6 mx-auto">
-      <% @boat.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-      <% end %>
-
-      <div>
-        <p>Category: <%= @boat.category %></p>
-        <p>Capacity: <%= @boat.capacity %></p>
-        <p>Description: <%= @boat.description %></p>
-        <p>Price per day: <%= @boat.price_per_day %></p>
+<div class="d-flex p-5">
+  <div class="w-50 p-5">
+    <div class="d-flex flex-wrap">
+      <div class="w-100 p-1">
+        <%= cl_image_tag @boat.photos.first.key, crop: :fill, style: "width: 100%; height: 100%;" %>
       </div>
-
-      <%= link_to 'Modify this boat', edit_boat_path(@boat) %>
-      <%= link_to 'Back to boats', boats_path %>
-      <%= render "bookings/new" %>
+      <div class="w-50 p-1">
+        <%= cl_image_tag @boat.photos.second.key, crop: :fill, style: "width: 100%; height: 100%;" %>
+      </div>
+      <div class="w-50 p-1">
+        <%= cl_image_tag @boat.photos.third.key, crop: :fill, style: "width: 100%; height: 100%;" %>
+      </div>
     </div>
+    <%= render "bookings/new" %>
+  </div>
+  <div class="w-50 p-5">
+    <h1><%= @boat.name %></h1>
+    <p>Category: <%= @boat.category %></p>
+    <p>Capacity: <%= @boat.capacity %></p>
+    <p>Description: <%= @boat.description %></p>
+    <p>Price per day: <%= @boat.price_per_day %></p>
+    <%= link_to 'Modify this boat', edit_boat_path(@boat) %>
+    <%= link_to 'Back to boats', boats_path %>
   </div>
 </div>

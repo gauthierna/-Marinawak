@@ -2,9 +2,12 @@ class BoatsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   before_action :set_boat, only: %i[ show edit update destroy ]
 
-
   def index
-    @boats = Boat.all
+    if params[:query].present?
+      @boats = Boat.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @boats = Boat.all
+    end
   end
 
   def show

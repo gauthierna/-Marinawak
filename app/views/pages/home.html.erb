@@ -2,6 +2,15 @@
   <div class="container">
     <h1> Sail accross the ocean</h1>
     <p>Rent a boat and start your adventure now!</p>
-    <a class="btn-gradient" href="#">Book now</a>
+    <div class="w-25">
+        <%= form_tag boats_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a boat"
+          %>
+        <%= submit_tag "Search", class: "btn btn-success" %>
+        <% end %>
+    </div>
   </div>
 </div>

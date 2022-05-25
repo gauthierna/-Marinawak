@@ -2,11 +2,6 @@
   <div class="d-flex align-items-center justify-content-between mb-3">
     <h3 class="mb-0">Discover all our available Boats</h3>
   </div>
-
-<div class="container">
-  <div class="d-flex align-items-center justify-content-between mb-3">
-    <h3 class="mb-0">Discover all our available Boats</h3>
-  </div>
   <% @boats.each do |b| %>
   <%= link_to boat_path(b) do %>
     <div class="card-trip col-6">

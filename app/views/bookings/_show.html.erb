@@ -19,7 +19,7 @@
     <div class="card-booking-infos">
       <h2>Boat : <%= b.boat.name %></h2>
       <p>Status : <%=b.status %></p>
-      <p>User : <%=b.user.first_name %></p>
+      <p>User : <%=b.user.first_name %> <%=b.user.last_name %></p>
       <p>From <%= b.start_date %> to <%= b.end_date %></p>
         <div class="buttons">
         <%= link_to "Accept", accepted_booking_path(b), data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}, class: "btn btn-success" %>

@@ -1,11 +1,11 @@
-<h1>Boats#show</h1>
+<h1><%= @boat.name %></h1>
 <div class="container my-5">
   <div class="row">
     <div class="col-6 mx-auto">
       <% @boat.photos.each do |photo| %>
       <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
       <% end %>
-      <h1><%= @boat.name %></h1>
+
       <div>
         <p>Category: <%= @boat.category %></p>
         <p>Capacity: <%= @boat.capacity %></p>

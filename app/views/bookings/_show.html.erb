@@ -1,3 +1,17 @@
+<h1>Pending bookings of your requests :</h1>
+<% @bookings_user.each do |b| %>
+  <div class="card-booking">
+    <%= cl_image_tag(b.boat.photos.first.key) if b.boat.photos.any? %>
+    <div class="card-booking-infos">
+      <h2>Boat : <%= b.boat.name %></h2>
+      <p>Status : <%=b.status %></p>
+      <p>Owner : <%=b.boat.user.first_name %></p>
+      <p>From <%= b.start_date %> to <%= b.end_date %></p>
+    </div>
+  </div>
+  <br>
+<% end %>
+
 <h1>Pending bookings of your boats:</h1>
 <% @bookings_owner.each do |b| %>
   <div class="card-booking">
@@ -16,16 +30,3 @@
   <br>
 <% end %>
 <br>
-<h1>Pending bookings of your requests :</h1>
-<% @bookings_user.each do |b| %>
-  <div class="card-booking">
-    <%= cl_image_tag(b.boat.photos.first.key) if b.boat.photos.any? %>
-    <div class="card-booking-infos">
-      <h2>Boat : <%= b.boat.name %></h2>
-      <p>Status : <%=b.status %></p>
-      <p>Owner : <%=b.boat.user.first_name %></p>
-      <p>From <%= b.start_date %> to <%= b.end_date %></p>
-    </div>
-  </div>
-  <br>
-<% end %>

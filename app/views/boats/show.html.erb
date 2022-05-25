@@ -1,25 +1,30 @@
-<div class="d-flex p-5">
-  <div class="w-50 p-5">
+<div class="m-3">
+<%#= link_to 'Back to boats', boats_path,class:"btn btn-primary" %>
+</div>
+<div class="d-flex px-5 py-4">
+  <div class="w-50 px-5 py-0">
     <div class="d-flex flex-wrap">
       <div class="w-100 p-1">
-        <%= cl_image_tag @boat.photos.first.key, crop: :fill, style: "width: 100%; height: 100%;" %>
+      <%= cl_image_tag @boat.photos.first.key, crop: :fill, class:"rounded-3",style: "width: 100%; height: 100%;" %>
       </div>
       <div class="w-50 p-1">
-        <%= cl_image_tag @boat.photos.second.key, crop: :fill, style: "width: 100%; height: 100%;" %>
+        <%= cl_image_tag @boat.photos.second.key, crop: :fill, class:"rounded-3",style: "width: 100%; height: 100%;" %>
       </div>
       <div class="w-50 p-1">
-        <%= cl_image_tag @boat.photos.third.key, crop: :fill, style: "width: 100%; height: 100%;" %>
+        <%= cl_image_tag @boat.photos.third.key, crop: :fill,class:"rounded-3", style: "width: 100%; height: 100%;" %>
       </div>
     </div>
-    <%= render "bookings/new" %>
   </div>
-  <div class="w-50 p-5">
+  <div class="w-40 p-5">
     <h1><%= @boat.name %></h1>
     <p>Category: <%= @boat.category %></p>
     <p>Capacity: <%= @boat.capacity %></p>
     <p>Description: <%= @boat.description %></p>
     <p>Price per day: <%= @boat.price_per_day %></p>
-    <%= link_to 'Modify this boat', edit_boat_path(@boat) %>
-    <%= link_to 'Back to boats', boats_path %>
+
+
+    <%= link_to 'Modify this boat', edit_boat_path(@boat), class:"btn btn-primary"%>
+
+    <%= render "bookings/new" %>
   </div>
 </div>

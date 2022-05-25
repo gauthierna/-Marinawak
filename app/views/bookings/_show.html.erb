@@ -7,10 +7,11 @@
       <p>Status : <%=b.status %></p>
       <p>Owner : <%=b.boat.user.first_name %></p>
       <p>From <%= b.start_date %> to <%= b.end_date %></p>
-        <div class="button">
-        <%= link_to "Accept", accepted_booking_path(b), data: {turbo_method: :patch, turbo_confirm: "Are you sure?"} %>
+        <div class="buttons">
+        <%= link_to "Accept", accepted_booking_path(b), data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}, class: "btn btn-success" %>
         <%= link_to "Deny", denied_booking_path(b), data: {turbo_method: :patch}, class: "btn btn-danger" %>
         </div>
     </div>
   </div>
+  <br>
 <% end %>

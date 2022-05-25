@@ -1,5 +1,23 @@
-<h1>Pending bookings:</h1>
-<% @bookings.each do |b| %>
+<h1>Pending bookings of your boats:</h1>
+<% @bookings_owner.each do |b| %>
+  <div class="card-booking">
+    <%= cl_image_tag(b.boat.photos.first.key) if b.boat.photos.any? %>
+    <div class="card-booking-infos">
+      <h2>Boat : <%= b.boat.name %></h2>
+      <p>Status : <%=b.status %></p>
+      <p>User : <%=b.user.first_name %></p>
+      <p>From <%= b.start_date %> to <%= b.end_date %></p>
+        <div class="buttons">
+        <%= link_to "Accept", accepted_booking_path(b), data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}, class: "btn btn-success" %>
+        <%= link_to "Deny", denied_booking_path(b), data: {turbo_method: :patch}, class: "btn btn-danger" %>
+        </div>
+    </div>
+  </div>
+  <br>
+<% end %>
+<br>
+<h1>Pending bookings of your requests :</h1>
+<% @bookings_user.each do |b| %>
   <div class="card-booking">
     <%= cl_image_tag(b.boat.photos.first.key) if b.boat.photos.any? %>
     <div class="card-booking-infos">
@@ -7,10 +25,6 @@
       <p>Status : <%=b.status %></p>
       <p>Owner : <%=b.boat.user.first_name %></p>
       <p>From <%= b.start_date %> to <%= b.end_date %></p>
-        <div class="buttons">
-        <%= link_to "Accept", accepted_booking_path(b), data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}, class: "btn btn-success" %>
-        <%= link_to "Deny", denied_booking_path(b), data: {turbo_method: :patch}, class: "btn btn-danger" %>
-        </div>
     </div>
   </div>
   <br>

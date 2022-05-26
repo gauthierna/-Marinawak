@@ -1,5 +1,12 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top" data-controller="navbar"
+<% if (controller_name == "pages" && action_name == "home") %>
+  <div class="navbar navbar-expand-sm navbar-home navbar-lewagon sticky-top" data-controller="navbar"
   data-action="scroll@window->navbar#updateNavbar">
+<% else %>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top" data-controller="navbar"
+  data-action="scroll@window->navbar#updateNavbar">
+<% end %>
+
+
   <div class="container-fluid">
     <%= link_to "Marinawak", root_path, class: "navbar-brand"%>
 

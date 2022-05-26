@@ -1,0 +1,78 @@
+// Mega carte pour englober les bookings dans le dashboard :
+
+.cards-booking {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  padding: 40px;
+  margin-left: 10px;
+}
+
+// Ci-dessous c'est tout ce qu'il y a dans les cartes ->
+
+
+.card-booking {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.card-booking img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-booking h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-booking p {
+  font-size: 12px;
+  line-height: 1.4;
+  // opacity: .7;
+  margin-bottom: 0;
+  margin-top: 1px;
+}
+
+// .card-booking a {
+//   padding-left: 16px;
+//   border-bottom: 16px;
+// }
+
+.card-booking-infos {
+  padding: 16px;
+  flex-grow: 1;
+}
+.buttons {
+  margin-right: 15px;
+  grid-row-gap: 5px;
+}
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #272343;
+  transition: background 0.3s ease;
+  border-bottom: 16px;
+
+}
+
+// Pour styliser la partie profil du dashboard ->
+
+.card-profile {
+  height: 600px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}

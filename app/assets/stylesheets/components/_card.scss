@@ -25,7 +25,6 @@
   color: black;
   margin: 0;
   margin-top: 6px;
-  font-family: $h2-font;
 }
 
 .card-trip p {
@@ -33,7 +32,6 @@
   opacity: .7;
   margin: 0;
   color: black;
-  font-family: $p-font;
   font-weight: 300;
 }
 
@@ -75,7 +73,6 @@
   padding: 16px 12px 0 0;
   border-top: 1px solid #eaeaea;
   margin-top: 20px;
-  font-family: $p-font;
   color: grey
   // display: flex;
 
@@ -84,6 +81,4 @@
 .card-user p {
   font-weight: 700;
   display: contents;
-  font-family: $p-font;
-
 }

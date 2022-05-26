@@ -4,7 +4,7 @@ class BoatsController < ApplicationController
 
   def index
     if params[:query].present?
-      @boats = Boat.where("name ILIKE ?", "%#{params[:query]}%")
+      @boats = Boat.search_by_columns("%#{params[:query]}%")
     else
       @boats = Boat.all
     end

@@ -22,6 +22,8 @@ gem "pundit"
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
 
+gem "pg_search"
+
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "jsbundling-rails"
 

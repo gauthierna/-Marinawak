@@ -3,8 +3,8 @@
     <h3 class="mb-0">Discover all our available Boats</h3>
   </div>
   <div class="cards">
-  <% @boats.each do |b| %>
-  <%= link_to boat_path(b) do %>
+    <% @boats.each do |b| %>
+    <%= link_to boat_path(b) do %>
       <div class="card-trip">
         <%=cl_image_tag(b.photos.first.key) if b.photos.any?%>
         <div class="card-trip-infos">
@@ -15,20 +15,17 @@
             <p><%= b.price_per_day %> ₿ per day</p>
           </div>
             <div class="card-user">
-              <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+              <% if b.user.avatar.present? %>
+                <%= cl_image_tag b.user.avatar.key, class: "card-trip-user avatar avatar-bordered" %>
+              <% else %>
+                  <%= image_tag "sparrow", class: "card-trip-user avatar avatar-bordered"%>
+              <% end %>
               <p>Patrick Balkany</p>
             </div>
-
           </div>
-          <% if b.user.avatar.present? %>
-              <%= cl_image_tag b.user.avatar.key, class: "card-trip-user avatar avatar-bordered" %>
-            <% else %>
-              <%= image_tag "sparrow", class: "card-trip-user avatar avatar-bordered"%>
-            <% end %>
         </div>
+      <% end %>
+    <% end %>
       </div>
-
-  <% end %>
-  <% end %>
   </div>
 </div>

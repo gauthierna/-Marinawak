@@ -1,36 +1,48 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@800&family=Roboto&family=Space+Mono&display=swap" rel="stylesheet">
-<h1>⚓️ Add your boat to Marinawak's fleet</h1>
-<div class="container my-3" style="width: 550px">
-  <%= simple_form_for (@boat) do |f| %>
-    <%= f.error_notification %>
 
-    <div class="form-inputs">
-      <div class="row g-3">
-        <div class="col 6">
-        <%= f.input :name, placeholder:"La Licorne" %>
-        </div>
-        <div class="col 6">
-        <%= f.input :category, placeholder:"Exploration" %>
-        </div>
-      </div>
-      <div>
-      <div class="row g-3">
-        <div class="col 6">
-      <%= f.input :capacity, placeholder:"20" %>
-        </div>
-        <div class="col 6">
-      <%= f.input :price_per_day, placeholder:"€ 250" %>
-        </div>
-      </div>
-      <div class="description">
-      <%= f.input :description, placeholder: "If you want to spend an amazing week sailing, exploring and dancing in the Mediterranean Sea with your friends, this boat is perfect for you!" %>
-      </div>
-      <%= f.input :photos, as: :file, input_html: { multiple: true }  %>
-    </div>
 
-    <div class="form-actions col-3">
-      <%= f.button :submit, "Create boat", class: "btn btn-success" %>
+
+<div class="wrapper" style="background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= asset_path('addboat')%>)">
+<div class="container" style="width: 600px">
+    <div class="card border-white p-5">
+    <div class="text-center">
+    <h2 class="py-2">⚓️ Add your boat to our fleet</h2>
     </div>
-  <% end %>
+    <%= simple_form_for (@boat) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <div class="row g-3">
+          <div class="col 6">
+          <%= f.input :name, placeholder:"La Licorne" %>
+          </div>
+          <div class="col 6">
+          <%= f.input :category, placeholder:"Exploration" %>
+          </div>
+        </div>
+        <div>
+        <div class="row g-3">
+          <div class="col 6">
+        <%= f.input :capacity, placeholder:"20" %>
+          </div>
+          <div class="col 6">
+        <%= f.input :price_per_day, placeholder:"€ 250" %>
+          </div>
+        </div>
+        <div class="description">
+        <%= f.input :description, placeholder: "If you want to spend an amazing week sailing, exploring and dancing in the Mediterranean Sea with your friends, this boat is perfect for you!" %>
+        </div>
+        <%= f.input :photos, as: :file, input_html: { multiple: true }  %>
+      </div>
+
+      <div class="form-actions">
+        <div class="d-grid col-6 mx-auto mt-4">
+        <%= f.button :submit, "Create boat", class: "btn btn-success" %>
+        </div>
+      </div>
+    <% end %>
+    </div>
+    </div>
+  </div>
 </div>

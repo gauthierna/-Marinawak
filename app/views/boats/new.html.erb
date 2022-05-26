@@ -1,10 +1,11 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@800&family=Roboto&family=Space+Mono&display=swap" rel="stylesheet">
 
-<div class="container my-3" style="width: 600px">
-<div class="card border-success p-5">
+<div class="wrapper" style="background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1541777594744-addc2de9d110?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170');">
+<div class="container" style="width: 600px">
+<div class="card border-white p-5">
   <div class="text-center">
-  <h1>⚓️ Add your boat to our fleet</h1>
+  <h2 class="py-2">⚓️ Add your boat to our fleet</h2>
   </div>
   <%= simple_form_for (@boat) do |f| %>
     <%= f.error_notification %>
@@ -40,4 +41,5 @@
     </div>
   <% end %>
   </div>
+</div>
 </div>

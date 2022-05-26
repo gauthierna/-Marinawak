@@ -20,42 +20,75 @@
 }
 
 .card-trip h2 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
+  color: black;
   margin: 0;
+  margin-top: 6px;
+  font-family: $h2-font;
 }
 
 .card-trip p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  color: black;
+  font-family: $p-font;
+  font-weight: 300;
 }
 
 
 .card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
+  padding: 25px 35px;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  border-bottom: 3px;
 }
 
 .card-trip-infos .card-trip-user {
-  position: absolute;
   right: 16px;
   bottom: 5px;
-  width: 30px;
+  width: 40px;
+
 }
 
 .card-trip-infos .button {
-  background-color: chocolate;
+  background-color: #272343;
   color: whitesmoke;
-  padding: 10px 10px;
-  border-radius: 30px;
+  // padding: 10px 10px;
+  border-radius: 5px;
   box-shadow: 0px 4px;
   text-align: center;
+  align-items: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  // border: 1px solid #4A4A4A;
+  width: fit-content;
+  padding: 2px 6px 2px 6px;
 }
 
 .cards a {
   text-decoration: none;
+}
+
+.card-user {
+  padding: 16px 12px 0 0;
+  border-top: 1px solid #eaeaea;
+  margin-top: 20px;
+  font-family: $p-font;
+  color: grey
+  // display: flex;
+
+}
+
+.card-user p {
+  font-weight: 700;
+  display: contents;
+  font-family: $p-font;
+
+}
+
+.avatar-bordered {
+  margin-right: 10px;
 }

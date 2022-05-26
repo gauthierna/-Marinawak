@@ -15,11 +15,20 @@
 .navbar-lewagon-white {
   background-color: white;
 }
+.navbar-lewagon-white a{
+ color: $blue;
+  &:hover {
+    color : $blue;
+  }
+}
 
 .navbar-home a {
   color: white;
+  &:hover {
+    color : white;
+  }
 }
 
-.navbar-home .dropdown a {
+.navbar .dropdown a {
   color: $blue;
 }

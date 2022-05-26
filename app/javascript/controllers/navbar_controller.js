@@ -8,14 +8,14 @@ export default class extends Controller {
   }
 
   updateNavbar() {
-    console.log(window.innerHeight);
-    console.log(window.scrollY);
+
     if (window.scrollY >= 40) {
       this.element.classList.add("navbar-lewagon-white")
+      this.element.classList.remove("navbar-home")
 
     } else {
       this.element.classList.remove("navbar-lewagon-white")
-      console.log("up up up")
+      this.element.classList.add("navbar-home")
     }
   }
 }

@@ -32,7 +32,7 @@
   // opacity: .7;
   margin: 0;
   color: black;
-  font-weight: 300;
+  font-weight: $font-weight-light;
 }
 
 
@@ -86,4 +86,9 @@
 
 .d-flex {
   margin-top: 50px;
+}
+
+.container-show {
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px 3px #dfdfdf;
 }

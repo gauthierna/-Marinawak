@@ -7,7 +7,7 @@
     <%= link_to boat_path(b) do %>
       <div class="card-trip">
         <%=cl_image_tag(b.photos.first.key) if b.photos.any?%>
-        <div class="card-trip-infos">
+        <div class="card-trip-infos font-weight-light">
           <div>
             <p class="button"><%= b.category %></p>
             <h2><%= b.name %></h2>

@@ -1,4 +1,9 @@
-<div class="footer">
+<% if (controller_name == "pages" && action_name == "home") %>
+  <div class="footer footer-home">
+<% else %>
+  <div class="footer">
+<% end %>
+
   <div class="footer-links">
     <a href="#"><i class="fab fa-github"></i></a>
     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -7,8 +12,7 @@
     <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
   <div class="footer-copyright">
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <p>© Marinawak</p>
+    <p>Made with  <i class="fa-solid fa-heart"></i>  at Le Wagon Paris</p>
     </div>
   </div>
 </div>

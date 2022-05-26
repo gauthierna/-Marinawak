@@ -1,18 +1,30 @@
-<h2>Forgot your password?</h2>
+<div class="wrapper" style="background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1541777594744-addc2de9d110?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070');">
+  <div class="container" style="width: 550px">
+    <div class="card border-white p-5">
+      <div class="text-center p-3">
+        <h2>Forgot your password?</h2>
+      </div>
+      <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= f.error_notification %>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
+        <div class="form-inputs">
+          <%= f.input :email,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" },
+                      placeholder: "chistrophecolomb@santamaria.com" %>
+        </div>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+        <div class="form-actions">
+          <div class="d-grid gap-2 d-md-flex justify-content-center p-4">
+          <%= f.button :submit, "Send me reset password instructions", class: "btn btn-success" %>
+          </div>
+        </div>
+      <% end %>
+
+        <div class="text-center p-4">
+          <%= render "devise/shared/links" %>
+        </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

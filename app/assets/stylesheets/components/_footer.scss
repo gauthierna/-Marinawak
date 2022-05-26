@@ -12,6 +12,9 @@
   /* height: 50px; */
   /* margin-top: 25px; */
   /* bottom: 0; */
+  p {
+    margin-bottom: 0;
+  }
 }
 .footer-links {
   display: flex;
@@ -29,4 +32,13 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+.footer-home {
+  color: white;
+  background-color: transparent;
+  .footer-links a {
+    color: white;
+    opacity: 0.8;
+  }
 }

@@ -1,5 +1,4 @@
 <div class="container">
-<% raise %>
   <div class="d-flex align-items-center justify-content-between mb-3">
     <h3 class="mb-0">Discover all our available Boats</h3>
   </div>
@@ -16,7 +15,11 @@
             <p><%= b.price_per_day %> ₿ per day</p>
 
           </div>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+          <% if b.user.avatar.present? %>
+              <%= cl_image_tag b.user.avatar.key, class: "card-trip-user avatar avatar-bordered" %>
+            <% else %>
+              <%= image_tag "sparrow", class: "card-trip-user avatar avatar-bordered"%>
+            <% end %>
         </div>
       </div>
 

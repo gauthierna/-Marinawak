@@ -1,6 +1,6 @@
 class Boat < ApplicationRecord
   include PgSearch::Model
-  multisearchable against: [:name, :category]
+  # multisearchable against: [:name, :category]
 
   pg_search_scope :search_by_columns,
   against: [ :name, :category ],

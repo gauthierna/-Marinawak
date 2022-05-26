@@ -2,8 +2,7 @@
   <div class="navbar navbar-expand-sm navbar-home navbar-lewagon sticky-top px-3" data-controller="navbar"
   data-action="scroll@window->navbar#updateNavbar">
 <% else %>
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top px-3" data-controller="navbar"
-  data-action="scroll@window->navbar#updateNavbar">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon-white navbar-lewagon sticky-top px-3">
 <% end %>
 
 
@@ -25,7 +24,7 @@
               <%= image_tag "sparrow", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <div class="dropdown-item">Hello <%= current_user.first_name %>!</div>
+              <div class="dropdown-item HellonoHover mb-1">Ahoy <%= current_user.first_name %>!</div>
               <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
               <%= link_to "Add a boat for rental", new_boat_path, class: "dropdown-item" %>
               <%= link_to "Edit profile", edit_user_registration_path, class: "dropdown-item" %>

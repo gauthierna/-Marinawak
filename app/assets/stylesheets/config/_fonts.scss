@@ -1,15 +1,9 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@800&family=Roboto:wght@300;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@800&family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@800&family=Poppins:wght@300;400;600;700&family=Roboto:wght@100;300;500;700&display=swap');
 // Define fonts for body and headers
-$body-font: "Overpass", "Roboto", "sans-serif";
-$headers-font: "Overpass", "Poppins", "sans-serif";
+$body-font: "Roboto", "sans-serif";
+$headers-font: "Poppins", "sans-serif";
 
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-bold: 700;
-$headings-font-weight: 800;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

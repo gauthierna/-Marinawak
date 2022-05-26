@@ -1,7 +1,11 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@800&family=Roboto&family=Space+Mono&display=swap" rel="stylesheet">
-<h1>⚓️ Add your boat to Marinawak's fleet</h1>
-<div class="container my-3" style="width: 550px">
+
+<div class="container my-3" style="width: 600px">
+<div class="card border-success p-5">
+  <div class="text-center">
+  <h1>⚓️ Add your boat to our fleet</h1>
+  </div>
   <%= simple_form_for (@boat) do |f| %>
     <%= f.error_notification %>
 
@@ -29,8 +33,11 @@
       <%= f.input :photos, as: :file, input_html: { multiple: true }  %>
     </div>
 
-    <div class="form-actions col-3">
+    <div class="form-actions">
+      <div class="d-grid col-6 mx-auto mt-4">
       <%= f.button :submit, "Create boat", class: "btn btn-success" %>
+      </div>
     </div>
   <% end %>
+  </div>
 </div>

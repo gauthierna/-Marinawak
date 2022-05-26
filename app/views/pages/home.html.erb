@@ -15,4 +15,6 @@
     </div>
   </div>
 </div>
-<%= cl_video_tag("BackgroundBoat", playsinline:true, autoplay: true, muted: true, loop: true, id: "background-video")%>
+<%= video_tag "https://res.cloudinary.com/dxa1umwr3/video/upload/v1653509082/development/BackgroundBoat.mp4", autoplay: true, muted: true, loop: true, id: "background-video" %>
+
+<%#= cl_video_tag("BackgroundBoat", fetch_format: :auto, playsinline: true, autoplay: true, muted: true, loop: true, id: "background-video")%>

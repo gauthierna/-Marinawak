@@ -22,15 +22,14 @@
 .card-trip h2 {
   font-size: 20px;
   font-weight: bold;
-  color: black;
+  color: #272343;
   margin: 0;
-  margin-top: 6px;
-  font-family: $h2-font;
+  margin-top: 10px;
 }
 
 .card-trip p {
   font-size: 12px;
-  opacity: .7;
+  // opacity: .7;
   margin: 0;
   color: black;
   font-family: $p-font;
@@ -76,14 +75,20 @@
   border-top: 1px solid #eaeaea;
   margin-top: 20px;
   font-family: $p-font;
-  color: grey
+  color: grey;
+  font-weight: 300;
   // display: flex;
-
 }
 
 .card-user p {
   font-weight: 700;
   display: contents;
   font-family: $p-font;
+  font-weight: 300;
 
+}
+
+.d-flex {
+  margin-top: 50px;
+  font-family: $h2-font;
 }

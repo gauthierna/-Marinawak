@@ -20,6 +20,12 @@
             </div>
 
           </div>
+          <% if b.user.avatar.present? %>
+              <%= cl_image_tag b.user.avatar.key, class: "card-trip-user avatar avatar-bordered" %>
+            <% else %>
+              <%= image_tag "sparrow", class: "card-trip-user avatar avatar-bordered"%>
+            <% end %>
+        </div>
       </div>
 
   <% end %>

@@ -13,15 +13,39 @@ puts "Creating users..."
 puts "Create user 1..."
 user_1 = User.create!(first_name: "James", last_name: "Bond", email: "test@test.com", password: "azerty")
 puts "User 1 created"
+user_1.avatar.attach(
+  {
+    io: File.open('public/images/dc.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  }
+)
+user_1.save!
 
 
 puts "Create user 2..."
 user_2 = User.create!(first_name: "Patrick", last_name: "Balkany", email: "pbalkany@prison.com", password: "azerty")
 puts "User 2 created"
+user_2.avatar.attach(
+  {
+    io: File.open('public/images/pb.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  }
+)
+user_2.save!
 
 puts "Create user 3..."
 user_3 = User.create!(first_name: "Jacques-Yves", last_name: "Cousteau", email: "jyc@ocean.com", password: "azerty")
 puts "User 3 created"
+user_3.avatar.attach(
+  {
+    io: File.open('public/images/jyc.jpeg'),
+    filename: 'anyname.jpg',
+    content_type: 'image/jpg'
+  }
+)
+user_3.save!
 
 
 

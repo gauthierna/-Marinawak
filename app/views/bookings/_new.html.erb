@@ -2,13 +2,16 @@
 <h3>Request rental of this boat</h3>
 <%= simple_form_for [@boat, @booking], data: { controller: 'flatpickr' } do |f| %>
             <%= f.error_notification %>
-            <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <div class="d-flex">
+            <div class="mb-3 me-3 string optional booking_start_date"><label class="form-label string optional" for="booking_start_date">Start date</label><input class="datepicker form-control me-2 optional string" type="text" name="booking[start_date]" id="booking_start_date"></div>
+            <%#= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker me-2"} %>
             <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+            </div>
+
             <% if user_signed_in? %>
-              <%= f.submit 'Book Gear', class: 'btn btn-primary' %>
+              <%= f.submit 'Book Boat', class: 'btn btn-primary' %>
             <% else %>
-              <%= f.submit 'Book Gear', class: 'disabled btn' %>
+              <%= f.submit 'Book Boat', class: 'disabled btn' %>
             <% end %>
           <% end %>
 </div>
-

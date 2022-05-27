@@ -28,12 +28,21 @@
           <span class="btn-label"><%= @boat.category %></span>
         </button>
       <h5><%= @boat.price_per_day %> $/day</h5>
-      <p>Capacity: <%= @boat.capacity %></p>
+      <p><i class="fa-solid fa-location-dot"> &nbsp</i>Location: <%= @boat.location %></p>
+      <p><i class="fa-solid fa-user"> &nbsp </i>Capacity: <%= @boat.capacity %></p>
       <p>Description: <%= @boat.description %></p>
 
+      <div class="avatar-user-photo"><% if @boat.user.avatar.present? %>
+                <%= cl_image_tag @boat.user.avatar.key, class: "card-trip-user avatar avatar-bordered" %>
+              <% else %>
+                  <%= image_tag "sparrow", class: "card-trip-user avatar avatar-bordered"%>
+              <% end %>
+              <p><%= @boat.user.first_name + " " + @boat.user.last_name %></p> </div>
 
 
+<% if @boat.user==current_user %>
       <%= link_to 'Modify this boat', edit_boat_path(@boat), class:"btn btn-primary margin-top: 10px"%>
+      <% end %>
 
       <%= render "bookings/new" %>
     </div>

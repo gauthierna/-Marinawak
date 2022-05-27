@@ -1,9 +1,9 @@
 // Mega carte pour englober les bookings dans le dashboard :
 
-.cards-booking {
+.dashboard {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: $box-shadow-cards;
   border-radius: 5px;
   padding: 40px;
   margin-left: 10px;
@@ -17,7 +17,7 @@
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: $box-shadow-cards;
   display: flex;
   align-items: center;
   border-radius: 5px;
@@ -74,8 +74,7 @@
   overflow: hidden;
   position: sticky;
   top: 60px;
-  height: 80vh;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: $box-shadow-cards;
   border-radius: 5px;
 }

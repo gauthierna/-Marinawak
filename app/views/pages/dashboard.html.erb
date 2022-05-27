@@ -1,16 +1,18 @@
 <div class="container my-3">
 
-  <div class="d-flex justify-content-between">
-    <div class="card-profile p-5 flex-grow-1  text-center">
+  <div class="d-flex justify-content-center">
+    <div class="card-profile p-5 flex-grow-1 text-center">
       <% if current_user.avatar.present? %>
-        <%= cl_image_tag current_user.avatar.key, class: "avatar-large mb-2" %>
+        <%= cl_image_tag current_user.avatar.key, class: "avatar-large my-5" %>
       <% else %>
       <%= image_tag "sparrow", class: "avatar-large mb-2"%>
       <% end %>
-      <h4><%= current_user.first_name %> <%= current_user.last_name %></h4>
-      <%= link_to "Add a boat for rental", new_boat_path, class: "btn btn-primary" %>
-      <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-primary" %>
-      <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-primary" %>
+      <h4 class="mt-2 mb-5"><%= current_user.first_name %> <%= current_user.last_name %></h4>
+      <div class="buttons d-grid">
+        <%= link_to "Add a boat for rental", new_boat_path, class: "btn btn-outline-primary" %>
+        <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-outline-primary" %>
+        <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-outline-primary" %>
+      </div>
 
     </div>
     <div class="col-9 ml-3 cards-booking">

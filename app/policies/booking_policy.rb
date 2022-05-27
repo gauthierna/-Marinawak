@@ -25,5 +25,4 @@ class BookingPolicy < ApplicationPolicy
   def denied?
     record.boat.user == user
   end
-
 end

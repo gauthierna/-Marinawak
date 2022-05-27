@@ -1,6 +1,6 @@
 class BoatsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
-  before_action :set_boat, only: %i[ show edit update destroy ]
+  before_action :set_boat, only: %i[show edit update destroy]
 
   def index
     if params[:query].present?
@@ -55,5 +55,4 @@ class BoatsController < ApplicationController
   def boat_params
     params.require(:boat).permit(:name, :category, :capacity, :description, :price_per_day, photos: [])
   end
-
 end

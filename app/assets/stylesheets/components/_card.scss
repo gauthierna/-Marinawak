@@ -85,6 +85,25 @@
 }
 
 .container-show {
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 0px 7px 3px #dfdfdf;
+  background: white;
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.avatar-user-photo {
+  padding: 16px 12px 16px 0;
+  border-top: 1px solid #eaeaea;
+  margin-top: 20px;
+  color: grey;
+  font-weight: 300;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  p {
+    font-size: 12px;
+    margin-left: 8px;
+    padding-top: 12px;
+  }
 }

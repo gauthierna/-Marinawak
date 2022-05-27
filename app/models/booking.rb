@@ -4,16 +4,14 @@ class Booking < ApplicationRecord
 
   after_create :set_price
 
-  scope :pending, ->{ where(status: "pending") }
-  scope :accepted, ->{ where(status: "accepted") }
-  scope :denied, ->{ where(status: "denied") }
+  scope :pending, -> { where(status: "pending") }
+  scope :accepted, -> { where(status: "accepted") }
+  scope :denied, -> { where(status: "denied") }
 
   def set_price
-    self.amount = (self.end_date - self.start_date) * self.boat.price_per_day
-    self.save
+    self.amount = (end_date - start_date) * boat.price_per_day
+    save
   end
-
-
 end
 
 # booking.user ==> celui qui book

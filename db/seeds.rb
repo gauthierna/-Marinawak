@@ -9,6 +9,8 @@ Booking.destroy_all
 User.destroy_all
 Boat.destroy_all
 
+ports = ["Vieux Port de Marseille", "Miami Beach Marina","Marina del Rey","Port de Doelan","Marina Fonatur Cozumel", "Marina Puerto Cancun", "Dubai Marina","Marina de Bizerte","Port de Honfleur","Port Stanley Lighthouse","Dermaga Marina Ancol","Marina Banda Al Rowdha","Marina Shlomo Lahat","Eastern Port Alexandria","Port of Victoria", "Marina du Marin"]
+
 puts "Creating users..."
 puts "Create user 1..."
 user_1 = User.create!(first_name: "James", last_name: "Bond", email: "test@test.com", password: "azerty")
@@ -53,7 +55,8 @@ user_3.save!
 
 puts "Creating boats..."
 
-boat = Boat.new(name: "Black Pearl", category:"Action", capacity: 40, price_per_day: 3000, user: user_3)
+boat = Boat.new(name: "Black Pearl", category: "Action", capacity: 40, price_per_day: 3000, user: user_3,
+                location: ports.sample , description: "A wonderful boat for long sailing")
 boat.photos.attach([
   {
     io: File.open('public/images/bp1.jpeg'),
@@ -75,7 +78,8 @@ boat.save!
 
 puts "Create boat 2...."
 
-boat_2 = Boat.new(name: "Calypso", category:"Exploration", capacity: 50, price_per_day: 1500, user: user_3)
+boat_2 = Boat.new(name: "Calypso", category:"Exploration", capacity: 50, price_per_day: 1500, user: user_3,
+                  location: ports.sample, description: "The best boat for ocean explorers")
 boat_2.photos.attach([
   {
     io: File.open('public/images/Calypso1.jpeg'),
@@ -97,7 +101,8 @@ boat_2.save!
 
 puts "Create boat 3...."
 
-boat_3 = Boat.new(name: "Gunboat", category:"Speed", capacity: 5, price_per_day: 10500, user: user_2)
+boat_3 = Boat.new(name: "Gunboat", category: "Speed", capacity: 5, price_per_day: 10500, user: user_2,
+                  location: ports.sample, description: "Fastest boat I've ever owned")
 boat_3.photos.attach([
   {
     io: File.open('public/images/gb1.jpeg'),
@@ -118,7 +123,8 @@ boat_3.photos.attach([
 boat_3.save!
 
 
-boat_4 = Boat.new(name: "Itama", category:"Luxury", capacity: 20, price_per_day: 201500, user: user_2)
+boat_4 = Boat.new(name: "Itama", category: "Luxury", capacity: 20, price_per_day: 201500, user: user_2,
+                  location: ports.sample, description: "Best boat for a ocean trip with friends")
 boat_4.photos.attach([
   {
     io: File.open('public/images/itama1.jpeg'),
@@ -139,7 +145,8 @@ boat_4.photos.attach([
 boat_4.save!
 
 
-boat_5 = Boat.new(name: "Q Boat", category:"Speed", capacity: 1, price_per_day:1500, user: user_1)
+boat_5 = Boat.new(name: "Q Boat", category:"Speed", capacity: 1, price_per_day:1500, user: user_1,
+                  location: ports.sample, description: "Stirred not shaken")
 boat_5.photos.attach([
   {
     io: File.open('public/images/qb1.jpeg'),
@@ -159,7 +166,8 @@ boat_5.photos.attach([
 ])
 boat_5.save!
 
-boat_6 = Boat.new(name: "Jeannot DB 43", category:"Luxury", capacity: 25, price_per_day:21500, user: user_2)
+boat_6 = Boat.new(name: "Jeannot DB 43", category:"Luxury", capacity: 25, price_per_day:21500, user: user_2,
+                  location: ports.sample,description: "Fast and efficient boat" )
 boat_6.photos.attach([
   {
     io: File.open('public/images/db1.jpeg'),
@@ -179,7 +187,8 @@ boat_6.photos.attach([
 ])
 boat_6.save!
 
-boat_7 = Boat.new(name: "Titanic", category:"Luxury", capacity: 1000, price_per_day:1250000, user: user_2)
+boat_7 = Boat.new(name: "Titanic", category:"Luxury", capacity: 1000, price_per_day:1250000, user: user_2,
+                  location: ports.sample, description: "An unbreakable boat")
 boat_7.photos.attach([
   {
     io: File.open('public/images/t1.jpeg'),
@@ -199,7 +208,8 @@ boat_7.photos.attach([
 ])
 boat_7.save!
 
-boat_8 = Boat.new(name: "Galeon 325", category:"Speed", capacity: 5, price_per_day:20000, user: user_1)
+boat_8 = Boat.new(name: "Galeon 325", category:"Speed", capacity: 5, price_per_day:20000, user: user_1,
+                  location: ports.sample, description: "A boat that is fast and furious")
 boat_8.photos.attach([
   {
     io: File.open('public/images/g1.jpeg'),
@@ -219,7 +229,8 @@ boat_8.photos.attach([
 ])
 boat_8.save!
 
-boat_9 = Boat.new(name: "Explorer Pro", category:"Family", capacity: 1, price_per_day:10, user: user_2)
+boat_9 = Boat.new(name: "Explorer Pro", category:"Family", capacity: 1, price_per_day:10, user: user_2,
+                  location: ports.sample, description: "An comfortable inflatable boat for everyone")
 boat_9.photos.attach([
   {
     io: File.open('public/images/ex1.jpeg'),
@@ -239,7 +250,8 @@ boat_9.photos.attach([
 ])
 boat_9.save!
 
-boat_10 = Boat.new(name: "Catana", category:"Catamaran", capacity: 5, price_per_day:2400, user: user_2)
+boat_10 = Boat.new(name: "Catana", category:"Catamaran", capacity: 5, price_per_day:2400, user: user_2,
+                  location: ports.sample, description: "This boat is perfect for fast sailing")
 boat_10.photos.attach([
   {
     io: File.open('public/images/ca1.jpeg'),
@@ -259,7 +271,8 @@ boat_10.photos.attach([
 ])
 boat_10.save!
 
-boat_11 = Boat.new(name: "Charles de Gaulle", category:"Military", capacity: 135, price_per_day:12500, user: user_1)
+boat_11 = Boat.new(name: "Charles de Gaulle", category:"Military", capacity: 135, price_per_day:12500, user: user_1,
+                  location: ports.sample, description: "Finally a boat that can carry your mom ")
 boat_11.photos.attach([
   {
     io: File.open('public/images/cdg1.jpeg'),
@@ -279,7 +292,8 @@ boat_11.photos.attach([
 ])
 boat_11.save!
 
-boat_12 = Boat.new(name: "Le Marité", category:"Voilier", capacity: 6, price_per_day:1500, user: user_3)
+boat_12 = Boat.new(name: "Le Marité", category:"Voilier", capacity: 6, price_per_day:1500, user: user_3,
+                  location: ports.sample, description: "An efficient and reliable sailing ship")
 boat_12.photos.attach([
   {
     io: File.open('public/images/ma1.jpeg'),
@@ -299,7 +313,8 @@ boat_12.photos.attach([
 ])
 boat_12.save!
 
-boat_13 = Boat.new(name: "Le Redoutable", category:"Submarine", capacity: 6, price_per_day:321500, user: user_3)
+boat_13 = Boat.new(name: "Le Redoutable", category:"Submarine", capacity: 6, price_per_day:321500, user: user_3,
+                  location: ports.sample, description: "Fast, agressive and undetectable")
 boat_13.photos.attach([
   {
     io: File.open('public/images/lr1.jpeg'),
@@ -319,7 +334,8 @@ boat_13.photos.attach([
 ])
 boat_13.save!
 
-boat_14 = Boat.new(name: "RMS Queen Elizabeth", category:"Paquebot", capacity: 14000, price_per_day:1500000, user: user_3)
+boat_14 = Boat.new(name: "RMS Queen Elizabeth", category:"Paquebot", capacity: 14000, price_per_day:1500000, user: user_3,
+                  location: ports.sample, description: "A cruiseship made in England")
 boat_14.photos.attach([
   {
     io: File.open('public/images/qe1.jpeg'),
@@ -339,7 +355,8 @@ boat_14.photos.attach([
 ])
 boat_14.save!
 
-boat_15 = Boat.new(name: "Vida 3", category:"Speedboat", capacity: 3, price_per_day:150000, user: user_1)
+boat_15 = Boat.new(name: "Vida 3", category:"Speedboat", capacity: 3, price_per_day:150000, user: user_1,
+                  location: ports.sample, description: "Fast, reliable and easy to drive")
 boat_15.photos.attach([
   {
     io: File.open('public/images/v1.jpeg'),

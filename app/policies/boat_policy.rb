@@ -21,5 +21,4 @@ class BoatPolicy < ApplicationPolicy
   def create?
     true
   end
-
 end

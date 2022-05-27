@@ -3,14 +3,17 @@
 <div class="banner" >
     <h1> Sail accross the ocean</h1>
     <p>Rent a boat and start your adventure now!</p>
-    <div class="w-25">
+    <div class="search-home w-25">
         <%= form_tag boats_path, method: :get, class: "d-flex" do %>
           <%= text_field_tag :query,
             params[:query],
             class: "form-control",
             placeholder: "Find a boat"
           %>
-        <%= submit_tag "Search", class: "btn btn-success" %>
+        <%#= submit_tag "f002", class: "btn btn-primary" %>
+        <button name="button" type="submit" class="btn btn-primary">
+          <i class="fas fa-search"></i>
+        </button>
         <% end %>
     </div>
   </div>

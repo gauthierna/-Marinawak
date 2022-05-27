@@ -14,12 +14,49 @@
   color: white;
 }
 
+.btn-primary{
+    border-radius: 100px;
+  }
+
+
+.search-index {
+  border: 0.5px solid $middle-blue;
+  border-radius: 100px;
+  background-color: white;
+  display: block;
+  padding: 5px 5px 5px 10px;
+  .form-control {
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+  }
+  i {
+    color: white;
+  }
+}
+
+.search-home {
+  border: none;
+  border-radius: 100px;
+  background-color: white;
+  display: block;
+  padding: 10px 10px 10px 20px;
+  .form-control {
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+  }
+  i {
+    color: white;
+  }
+
 .btn-cat {
   background-color: #272343;
   box-sizing: 4px;
   color: white;
   font-weight: 600;
   margin-bottom: 25px;
+
   font-size: 12px;
   border-radius: 10px;
   padding: 4px 10px;
@@ -28,4 +65,5 @@
 .btn-cat:hover{
   background-color: #272343;
   color: white;
+
 }

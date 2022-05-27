@@ -17,7 +17,7 @@
               <%= f.input :password,
                           required: false,
                           input_html: { autocomplete: "current-password" },
-                          placeholder: "password" %>
+                          placeholder: "******" %>
               <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
 
             </div>
@@ -25,7 +25,7 @@
 
         <div class="form-actions">
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <%= f.button :submit, "Log in", class: "btn btn-success" %>
+          <%= f.button :submit, "Log in", class: "btn btn-primary" %>
           </div>
         </div>
       <% end %>

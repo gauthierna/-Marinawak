@@ -1,0 +1,23 @@
+
+<% if @boats.any? %>
+  <h3>Here are your boats</h3>
+  <div class="cards">
+      <% @boats.each do |b| %>
+        <%= link_to boat_path(b) do %>
+          <div class="card-trip">
+            <%=cl_image_tag(b.photos.first.key) if b.photos.any?%>
+            <div class="card-trip-infos font-weight-light">
+              <div>
+                <p class="button"><%= b.category %></p>
+                <h2><%= b.name %></h2>
+                <p><%= b.description %></p>
+                <p><%= b.price_per_day %> ₿ per day</p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+<% else %>
+  <h3>Seems like your too poor to have a boat<h3>
+<% end %>

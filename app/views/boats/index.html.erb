@@ -4,28 +4,27 @@
   </div>
   <div class="cards">
     <% @boats.each do |b| %>
-    <%= link_to boat_path(b) do %>
-      <div class="card-trip">
-        <%=cl_image_tag(b.photos.first.key) if b.photos.any?%>
-        <div class="card-trip-infos font-weight-light">
-          <div>
-            <p class="button"><%= b.category %></p>
-            <h2><%= b.name %></h2>
-            <p><%= b.description %></p>
-            <p><%= b.price_per_day %> ₿ per day</p>
-          </div>
-            <div class="card-user">
-              <% if b.user.avatar.present? %>
-                <%= cl_image_tag b.user.avatar.key, class: "card-trip-user avatar avatar-bordered" %>
-              <% else %>
-                  <%= image_tag "sparrow", class: "card-trip-user avatar avatar-bordered"%>
-              <% end %>
-              <p><%= b.user.first_name + " " +b.user.last_name %></p>
+      <%= link_to boat_path(b) do %>
+        <div class="card-trip">
+          <%=cl_image_tag(b.photos.first.key) if b.photos.any?%>
+          <div class="card-trip-infos font-weight-light">
+            <div>
+              <p class="button"><%= b.category %></p>
+              <h2><%= b.name %></h2>
+              <p><%= b.description %></p>
+              <p><%= b.price_per_day %> ₿ per day</p>
+            </div>
+              <div class="card-user">
+                <% if b.user.avatar.present? %>
+                  <%= cl_image_tag b.user.avatar.key, class: "card-trip-user avatar avatar-bordered" %>
+                <% else %>
+                    <%= image_tag "sparrow", class: "card-trip-user avatar avatar-bordered"%>
+                <% end %>
+                <p><%= b.user.first_name + " " +b.user.last_name %></p>
+              </div>
             </div>
           </div>
-        </div>
       <% end %>
     <% end %>
-      </div>
   </div>
 </div>

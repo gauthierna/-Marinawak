@@ -70,8 +70,10 @@
 // Pour styliser la partie profil du dashboard ->
 
 .card-profile {
-  height: 600px;
   overflow: hidden;
+  position: sticky;
+  top: 60px;
+  height: 80vh;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;

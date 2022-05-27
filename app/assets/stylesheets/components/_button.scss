@@ -32,9 +32,7 @@
     border-radius: 25px;
     background-color: white;
   }
-  i {
-    color: white;
-  }
+
 
 .search-home {
   border: none;
@@ -42,15 +40,16 @@
   background-color: white;
   display: block;
   padding: 10px 10px 10px 20px;
+    i {
+    color: white;
+    }
   }
 
   .form-control {
     border: none;
     border-radius: 25px;
     background-color: white;
-  }
-  i {
-    color: white;
+
   }
 
 .btn-cat {

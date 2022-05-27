@@ -1,4 +1,5 @@
-<div class="cards-booking">
+
+<% if @bookings_owner.any? %>
   <h6>Pending bookings of your boats:</h6>
   <% @bookings_owner.each do |b| %>
     <div class="card-booking">
@@ -11,15 +12,16 @@
       </div>
       <div class="buttons d-grid">
         <%= link_to "Accept", accepted_booking_path(b), data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
-        <%= link_to "Deny", denied_booking_path(b), data: {turbo_method: :patch}, class: "btn btn-outline-warning" %>
+        <%= link_to "Deny", denied_booking_path(b), data: {turbo_method: :patch}, class: "btn btn-outline-warning" %>s
       </div>
     </div>
     <br>
   <% end %>
-</div>
+<% end %>
+
 <br>
 
-<div class="cards-booking">
+<% if @bookings_user.any? %>
   <h6>Pending bookings of your requests :</h6>
   <% @bookings_user.each do |b| %>
     <div class="card-booking">
@@ -33,4 +35,4 @@
     </div>
     <br>
   <% end %>
-</div>
+<% end %>

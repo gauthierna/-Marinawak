@@ -1,11 +1,10 @@
-<div class="cards-booking">
-  <h5>Your boats are in high demand:</h5>
+<h5>Your boats are in high demand:</h5>
 
-  <% @bookings_owner.each do |b| %>
+<% @bookings_owner.each do |b| %>
     <div class="card-booking">
       <%= cl_image_tag(b.boat.photos.first.key) if b.boat.photos.any? %>
       <div class="card-booking-infos">
-        <h2>Boat : <%= b.boat.name %> Price - <%=b.amount%> ₿</h2>
+        <h2><%= b.boat.name %></h2>
         <p>Status : <%=b.status %></p>
         <p>User : <%=b.user.first_name %> <%=b.user.last_name %></p>
         <p>From <%= b.start_date %> to <%= b.end_date %></p>
@@ -13,12 +12,14 @@
 
       <% if b.status == "pending"  %>
         <div class="buttons d-grid">
+          <h2>Price - <%=b.amount%> ₿</h2>
           <%= link_to "Accept", accepted_booking_path(b), data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-success" %>
           <%= link_to "Deny", denied_booking_path(b), data: {turbo_method: :patch}, class: "btn btn-outline-warning" %>
         </div>
       <% end %>
       <% if b.status == "accepted"  %>
         <div class="buttons d-grid">
+          <h2><%=b.amount%> ₿</h2>
           <i style="font-size: 35px; color:green;" class="fa-solid fa-check"></i>
         </div>
       <% end %>
@@ -32,15 +33,14 @@
     <div class="card-booking">
       <%= cl_image_tag(b.boat.photos.first.key) if b.boat.photos.any? %>
       <div class="card-booking-infos">
-        <h2>Boat : <%= b.boat.name %> Price - <%=b.amount%> ₿</h2>
+        <h2>Boat : <%= b.boat.name %></h2>
         <p>Status : <%=b.status %></p>
         <p>Owner : <%=b.boat.user.first_name %></p>
         <p>From <%= b.start_date %> to <%= b.end_date %></p>
       </div>
       <div class="buttons d-grid">
-      <i style="font-size: 35px; color:blue;" class="fa-solid fa-user-clock"></i>
-              </div>
-
+      <h2><%=b.amount%> ₿</h2>
+        <i style="font-size: 35px; color:blue;" class="fa-solid fa-user-clock"></i>
+       </div>
     </div>
-  <% end %>
-</div>
+<% end %>

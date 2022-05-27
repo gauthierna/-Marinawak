@@ -4,36 +4,25 @@
   justify-content: space-between;
   background-color: transparent;
   transition: 0.5s background-color ease;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
-
-.navbar .dropdown-menu {
-  border-radius: 8px;
-}
-
-.HellonoHover{
-  pointer-events: none;
-  text-align: center;
-  border-bottom: 0.5px solid $blue;
+    .navbar-collapse {
+      flex-grow: 0;
+    }
+    .navbar-brand img {
+      width: 40px;
+    }
 }
 
 // Navbar White ///
 
 .navbar-lewagon-white {
   background-color: white;
-}
-.navbar-lewagon-white a{
- color: $blue;
-  &:hover {
-    color : $blue;
-  }
+  box-shadow: $box-shadow-cards;
+    a {
+      color: $blue;
+      &:hover {
+      color : $blue;
+      }
+    }
 }
 
 // Navbar Home ///
@@ -44,6 +33,19 @@
     color : white;
   }
 }
+
+// DROPDOWN MENU
+
 .navbar .dropdown a {
   color: $blue;
+}
+
+.navbar .dropdown-menu {
+  border-radius: 3px;
+}
+
+.HellonoHover{
+  pointer-events: none;
+  text-align: center;
+  border-bottom: 0.5px solid $blue;
 }

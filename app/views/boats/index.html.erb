@@ -1,8 +1,22 @@
 <div class="container">
-  <div class="d-flex align-items-center justify-content-between mb-3">
+  <div class="d-flex align-items-center justify-content-between my-4">
     <h3 class="mb-0">Discover all our available Boats</h3>
-  </div>
-  <div class="cards">
+    <div class="search-index w-25">
+          <%= form_tag boats_path, method: :get, class: "d-flex" do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find a boat"
+            %>
+          <%#= submit_tag "Search", class: "btn btn-primary" %>
+          <button name="button" type="submit" class="btn btn-primary">
+          <i class="fas fa-search"></i>
+        </button>
+          <% end %>
+      </div>
+    </div>
+
+  <div class="cards mb-4">
     <% @boats.each do |b| %>
     <%= link_to boat_path(b) do %>
       <div class="card-trip">

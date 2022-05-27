@@ -1,4 +1,4 @@
-<div class="container-show">
+
   <div class="m-3">
   <%#= link_to 'Back to boats', boats_path,class:"btn btn-primary" %>
   </div>
@@ -20,15 +20,20 @@
         <% end %>
       </div>
     </div>
+  <div class="container-show">
     <div class="w-40 p-5">
       <h1><%= @boat.name %></h1>
-      <p>Category: <%= @boat.category %></p>
+      <%# <p> <strong><%= @boat.category</strong></p><%= @boat.category %>
+      <button class="btn btn-cat">
+          <span class="btn-label"><%= @boat.category %></span>
+        </button>
+      <h5><%= @boat.price_per_day %> $/day</h5>
       <p>Capacity: <%= @boat.capacity %></p>
       <p>Description: <%= @boat.description %></p>
-      <p>Price per day: <%= @boat.price_per_day %></p>
 
 
-      <%= link_to 'Modify this boat', edit_boat_path(@boat), class:"btn btn-primary"%>
+
+      <%= link_to 'Modify this boat', edit_boat_path(@boat), class:"btn btn-primary margin-top: 10px"%>
 
       <%= render "bookings/new" %>
     </div>

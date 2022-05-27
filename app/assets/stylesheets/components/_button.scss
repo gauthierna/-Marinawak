@@ -32,6 +32,9 @@
     border: none;
     border-radius: 25px;
     background-color: white;
+    &:focus {
+    box-shadow: none;
+    }
   }
 }
 
@@ -49,6 +52,9 @@
     border: none;
     border-radius: 25px;
     background-color: white;
+    &:focus {
+      box-shadow: none;
+      }
   }
 
   }

@@ -25,13 +25,15 @@
   background-color: white;
   display: block;
   padding: 5px 5px 5px 10px;
-
-}
+  i {
+    color: white;
+    }
   .form-control {
     border: none;
     border-radius: 25px;
     background-color: white;
   }
+}
 
 
 .search-home {
@@ -43,14 +45,14 @@
     i {
     color: white;
     }
-  }
-
-  .form-control {
+    .form-control {
     border: none;
     border-radius: 25px;
     background-color: white;
+  }
 
   }
+
 
 .btn-cat {
   background-color: #272343;
